@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Excercise } from '../models/Exercise';
+import { Exercise } from '../models/Exercise';
 import { WgerApiIntegrationService } from '../wger-api-integration.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { WgerApiIntegrationService } from '../wger-api-integration.service';
 })
 export class MuscleGroupExercisesComponent implements OnInit {
   currentMuscle = ""
-  exerciseList: Excercise[] = []
+  exerciseList: Exercise[] = []
   constructor(private route: ActivatedRoute, private exerciseService: WgerApiIntegrationService) {
   }
 

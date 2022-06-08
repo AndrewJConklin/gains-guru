@@ -1,16 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Excercise } from './models/Exercise';
-import { ExerciseDetails } from './models/ExerciseDetail';
+import { Exercise } from './models/Exercise';
+import { ExerciseDetails } from './models/ExerciseDetails';
 
 type ExerciseResponse = {
-  results: Excercise[];
+  results: Exercise[];
 }
-
-type ExcerciseDetailsResponse = {
-  results: ExerciseDetails;
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -21,8 +16,8 @@ export class WgerApiIntegrationService {
     return this.http.get<ExerciseResponse>("https://wger.de/api/v2/exerciseinfo/?limit=419")
   }
 
-  getExerciseDetails() {
-    return this.http.get<ExcerciseDetailsResponse>("https://wger.de/api/v2/exerciseinfo/")
+  getExerciseDetails(exerciseID: string) {
+    return this.http.get<ExerciseDetails>(`https://wger.de/api/v2/exerciseinfo/${exerciseID}`)
   }
 
 }
