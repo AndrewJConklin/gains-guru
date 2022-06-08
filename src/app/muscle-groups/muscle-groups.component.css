@@ -1,6 +1,6 @@
 h2 {
   background-color: hsl(189, 65%, 22%);
-  padding: 30px;
+  padding: 10px;
   border-radius: 10px;
   margin: 0 15%;
   text-align: center;
@@ -8,5 +8,15 @@ h2 {
 
 ul {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  h2 {
+    padding: 20px;
+  }
+
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

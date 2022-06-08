@@ -1,6 +1,6 @@
 h2 {
   background-color: hsl(189, 65%, 22%);
-  padding: 30px;
+  padding: 10px;
   border-radius: 10px;
   margin: 0 15%;
   text-align: center;
@@ -14,18 +14,18 @@ a:visited {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 24px;
   background-color: hsl(46, 100%, 97%);
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   margin: 0 20%;
   text-align: center;
 }
 
 .lift-details {
-  font-size: 30px;
+  font-size: 16px;
   background-color: #8797B2;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   margin: 0 20%;
   text-align: center;
@@ -38,4 +38,20 @@ h3 {
 
 img {
   max-width: 100%;
+}
+
+@media (min-width: 700px) {
+  h2 {
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .lift-details {
+    font-size: 30px;
+    padding: 20px;
+  }
 }
