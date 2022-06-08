@@ -1,0 +1,6 @@
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: hsl(189, 65%, 22%);
+}

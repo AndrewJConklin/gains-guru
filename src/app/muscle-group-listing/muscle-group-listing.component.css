@@ -1,0 +1,20 @@
+.muscle-group-listing {
+  font-size: 36px;
+  padding: 6px;
+  color: hsl(189, 65%, 22%);
+  background-color: hsl(46, 100%, 97%);
+  border: solid hsl(0, 0%, 2%);
+  margin-bottom: 2px;
+}
+
+.muscle-group-listing:hover {
+  background-color: hsl(200, 100%, 68%);
+  color: blue;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: hsl(189, 65%, 22%);
+}

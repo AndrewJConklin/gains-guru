@@ -1,0 +1,7 @@
+<h2>Muscle Groups</h2>
+<ul>
+  <li *ngFor="let muscleGroup of muscleGroups">
+    <app-muscle-group-listing [name]="muscleGroup.name">
+    </app-muscle-group-listing>
+  </li>
+</ul>
