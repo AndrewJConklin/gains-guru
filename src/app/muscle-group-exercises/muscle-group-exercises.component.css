@@ -1,14 +1,14 @@
-.exercise-listing {
-  font-size: 36px;
-  padding: 6px;
-  color: hsl(189, 65%, 22%);
-  background-color: hsl(46, 100%, 97%);
-  border: solid hsl(0, 0%, 2%);
-  margin-bottom: 2px;
+h2 {
+  background-color: hsl(189, 65%, 22%);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 15%;
+  text-align: center;
 }
 
-.exercise-listing:hover {
-  background-color: hsl(200, 100%, 68%);
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 a,
@@ -16,4 +16,20 @@ a:active,
 a:visited {
   text-decoration: none;
   color: hsl(189, 65%, 22%);
+}
+
+.exercise-listing {
+  font-size: 36px;
+  padding: 6px;
+  color: hsl(189, 65%, 22%);
+  background-color: hsl(46, 100%, 97%);
+  border: solid hsl(0, 0%, 2%);
+  margin: 0px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+.exercise-listing:hover {
+  background-color: hsl(200, 100%, 68%);
 }

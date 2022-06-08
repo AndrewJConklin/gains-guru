@@ -1,11 +1,41 @@
-h2 a {
-  font-size: 42px;
-  margin-bottom: 20px;
+h2 {
+  background-color: hsl(189, 65%, 22%);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 15%;
+  text-align: center;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
   color: hsl(46, 100%, 97%);
 }
 
 h3 {
   font-size: 30px;
-  margin-bottom: 12px;
-  color: hsl(0, 0%, 2%);
+  background-color: hsl(46, 100%, 97%);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 20%;
+  text-align: center;
+}
+
+.lift-details {
+  font-size: 30px;
+  background-color: #8797B2;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 20%;
+  text-align: center;
+}
+
+.description {
+  margin-top: 12px;
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
 }

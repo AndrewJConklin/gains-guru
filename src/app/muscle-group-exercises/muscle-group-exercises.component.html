@@ -1,10 +1,8 @@
 <h2>{{currentMuscle}}</h2>
 <ul>
-  <li *ngFor="let exercise of exerciseList">
-    <div class="exercise-listing">
-      <a routerLink="/{{currentMuscle}}/{{exercise.id}}">
-        {{exercise.name}}
-      </a>
-    </div>
+  <li class="exercise-listing" *ngFor="let exercise of exerciseList">
+    <a routerLink="/{{currentMuscle}}/{{exercise.id}}">
+      {{exercise.name}}
+    </a>
   </li>
 </ul>

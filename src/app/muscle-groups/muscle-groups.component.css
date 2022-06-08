@@ -1,0 +1,12 @@
+h2 {
+  background-color: hsl(189, 65%, 22%);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 15%;
+  text-align: center;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
