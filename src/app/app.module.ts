@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { MuscleGroupListingComponent } from './muscle-group-listing/muscle-group-listing.component';
 import { MuscleGroupsComponent } from './muscle-groups/muscle-groups.component';
 import { MuscleGroupExercisesComponent } from './muscle-group-exercises/muscle-group-exercises.component';
+import { ExerciseDetailsComponent } from './exercise-details/exercise-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MuscleGroupListingComponent,
     MuscleGroupsComponent,
-    MuscleGroupExercisesComponent
+    MuscleGroupExercisesComponent,
+    ExerciseDetailsComponent
   ],
   imports: [
     BrowserModule,

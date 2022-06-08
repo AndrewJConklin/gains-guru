@@ -9,5 +9,11 @@
 
 .exercise-listing:hover {
   background-color: hsl(200, 100%, 68%);
-  color: blue;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: hsl(189, 65%, 22%);
 }

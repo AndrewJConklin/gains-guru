@@ -1,0 +1,11 @@
+h2 a {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: hsl(46, 100%, 97%);
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  color: hsl(0, 0%, 2%);
+}

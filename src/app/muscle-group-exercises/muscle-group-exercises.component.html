@@ -2,7 +2,9 @@
 <ul>
   <li *ngFor="let exercise of exerciseList">
     <div class="exercise-listing">
-      <p>{{exercise.name}}</p>
+      <a routerLink="/{{currentMuscle}}/{{exercise.name}}">
+        {{exercise.name}}
+      </a>
     </div>
   </li>
 </ul>

@@ -1,5 +1,5 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&display=swap');
 
 body {
   font-family: 'Anton', sans-serif;
@@ -8,6 +8,7 @@ body {
 }
 
 h1 {
+  font-family: 'Permanent Marker', cursive;
   font-size: 60px;
   margin-bottom: 32px;
   color: hsl(189, 65%, 22%);
@@ -17,4 +18,8 @@ h2 {
   font-size: 42px;
   margin-bottom: 20px;
   color: hsl(46, 100%, 97%);
+}
+
+a {
+  text-decoration: none;
 }
