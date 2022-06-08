@@ -1,3 +1,6 @@
 <h2><a routerLink="/{{currentMuscle}}">{{currentMuscle}}</a></h2>
 <h3>{{currentExerciseDetails.name}}</h3>
 <div [innerHTML]="currentExerciseDetails.description"></div>
+<ng-template [ngIf]="currentExerciseDetails.images">
+  <img [src]="currentExerciseDetails.images[0].image" />
+</ng-template>
