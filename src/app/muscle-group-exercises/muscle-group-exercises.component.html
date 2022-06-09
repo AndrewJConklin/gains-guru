@@ -1,9 +1,26 @@
-<h2>{{currentMuscle}}</h2>
+<div>
+  <h2>{{currentMuscle}}</h2>
+  <form #searchForm="ngForm" (ngSubmit)="search(searchForm.value)">
+    <input name="searchTerm" placeholder="Bench Press, Butterfly" ngModel />
+    <input type="submit" value="Search" />
+  </form>
+</div>
+<ng-template [ngIf]="filteredExercises.length < 1">
+  <ul>
+    <li class="exercise-listing" *ngFor="let exercise of exerciseList">
+      <a routerLink="/muscle-groups/{{currentMuscle}}/{{exercise.id}}">
+        {{exercise.name}}
+      </a>
+    </li>
+  </ul>
+</ng-template>
+
 <ul>
-  <li class="exercise-listing" *ngFor="let exercise of exerciseList">
+  <li class="exercise-listing" *ngFor="let exercise of filteredExercises">
     <a routerLink="/muscle-groups/{{currentMuscle}}/{{exercise.id}}">
       {{exercise.name}}
     </a>
   </li>
 </ul>
+
 <app-spinner *ngIf="loading"></app-spinner>

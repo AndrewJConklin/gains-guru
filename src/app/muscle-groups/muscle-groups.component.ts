@@ -10,9 +10,9 @@ import { MuscleService } from '../muscle.service';
 })
 export class MuscleGroupsComponent implements OnInit {
   muscleGroups: Muscle[] = []
-
   constructor(private muscleService: MuscleService) {
   }
+
 
   ngOnInit(): void {
     this.muscleService.fetchMuscleGroups().subscribe(muscleGroups => {
