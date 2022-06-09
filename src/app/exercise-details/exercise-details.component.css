@@ -10,12 +10,12 @@ a,
 a:active,
 a:visited {
   text-decoration: none;
-  color: hsl(46, 100%, 97%);
+  color: white;
 }
 
 h3 {
   font-size: 24px;
-  background-color: hsl(46, 100%, 97%);
+  background-color: white;
   padding: 10px;
   border-radius: 10px;
   margin: 0 20%;
@@ -24,7 +24,6 @@ h3 {
 
 .lift-details {
   font-size: 16px;
-  background-color: #8797B2;
   padding: 10px;
   border-radius: 10px;
   margin: 0 20%;
@@ -32,7 +31,6 @@ h3 {
 }
 
 .description {
-  margin-top: 12px;
   text-align: left;
 }
 

@@ -1,26 +1,26 @@
 h2 {
   background-color: hsl(189, 65%, 22%);
   padding: 10px;
-  border-radius: 10px;
   margin: 0 15%;
+  border-radius: 10px;
   text-align: center;
 }
 
 form {
   text-align: center;
+  max-width: 100%;
+  margin: 0 15%;
 }
 
 input {
   font-size: 20px;
-  max-width: 100%;
-  background: hsl(46, 100%, 97%);
-  color: hsl(0, 0, 2%);
+  color: hsl(189, 65%, 22%);
   transition: all 200ms ease;
   border-left: 0 solid transparent;
   border: 0;
   padding: 6px;
   border-radius: 10px;
-  box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+  box-shadow: 0 0 2rem rgb(20, 82, 93, 20%);
 }
 
 ul {
@@ -39,16 +39,8 @@ a:visited {
   font-size: 24px;
   padding: 6px;
   color: hsl(189, 65%, 22%);
-  background-color: hsl(46, 100%, 97%);
-  border: solid hsl(0, 0%, 2%);
-  margin: 0px;
+  margin: 3% 0;
   text-align: center;
-  border-radius: 10px;
-}
-
-
-.exercise-listing:hover {
-  background-color: hsl(200, 100%, 68%);
 }
 
 @media (min-width: 700px) {
@@ -58,7 +50,6 @@ a:visited {
 
   input {
     font-size: 24px;
-    padding: 10px;
   }
 
   ul {
@@ -67,6 +58,6 @@ a:visited {
 
   .exercise-listing {
     font-size: 36px;
-    padding: 6px;
+    padding: 20px;
   }
 }

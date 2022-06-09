@@ -18,5 +18,7 @@ ul {
 
   ul {
     grid-template-columns: repeat(2, 1fr);
+    margin: 3% 20%;
+    grid-row-gap: 50%;
   }
 }

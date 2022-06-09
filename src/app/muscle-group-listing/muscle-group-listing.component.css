@@ -1,11 +1,9 @@
 .muscle-group-listing {
   font-size: 24px;
-  padding: 20px;
   color: hsl(189, 65%, 22%);
-  background-color: hsl(46, 100%, 97%);
-  border: solid hsl(0, 0%, 2%);
   text-align: center;
   border-radius: 10px;
+  margin-top: 10%;
 }
 
 a,
@@ -15,15 +13,9 @@ a:visited {
   color: hsl(189, 65%, 22%);
 }
 
-.muscle-group-listing:hover {
-  background-color: hsl(200, 100%, 68%);
-}
-
 @media (min-width: 700px) {
   .muscle-group-listing {
     font-size: 40px;
-    padding: 40px;
     text-align: center;
-    border-radius: 10px;
   }
 }
