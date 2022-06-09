@@ -13,14 +13,17 @@ export class ExerciseDetailsComponent implements OnInit {
   currentMuscle: string = ""
   currentExcerciseID: string = ""
   currentExerciseDetails: ExerciseDetails = { name: "", id: "", description: "" }
+  public loading: boolean = false
 
   constructor(private route: ActivatedRoute, private exerciseService: WgerApiIntegrationService) { }
 
   ngOnInit() {
     this.currentMuscle = this.route.snapshot.paramMap.get("name") || ""
     this.currentExcerciseID = this.route.snapshot.paramMap.get("id") || ""
+    this.loading = true
     this.exerciseService.getExerciseDetails(this.currentExcerciseID).subscribe(response => {
       this.currentExerciseDetails = response
+      this.loading = false
     })
   }
 

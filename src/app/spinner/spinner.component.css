@@ -1,0 +1,23 @@
+h2 {
+  color: hsl(189, 65%, 22%);
+  background-color: hsl(46, 100%, 97%);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 15%;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  h2 {
+    padding: 20px;
+  }
+}
+
+img {
+  width: 60%;
+}
+
+.spinner {
+  text-align: center;
+
+}

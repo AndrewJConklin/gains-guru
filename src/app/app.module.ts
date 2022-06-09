@@ -8,6 +8,8 @@ import { MuscleGroupListingComponent } from './muscle-group-listing/muscle-group
 import { MuscleGroupsComponent } from './muscle-groups/muscle-groups.component';
 import { MuscleGroupExercisesComponent } from './muscle-group-exercises/muscle-group-exercises.component';
 import { ExerciseDetailsComponent } from './exercise-details/exercise-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ExerciseDetailsComponent } from './exercise-details/exercise-details.co
     MuscleGroupListingComponent,
     MuscleGroupsComponent,
     MuscleGroupExercisesComponent,
-    ExerciseDetailsComponent
+    ExerciseDetailsComponent,
+    PageNotFoundComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<h2><a routerLink="/{{currentMuscle}}">{{currentMuscle}}</a></h2>
+<h2><a routerLink="/muscle-groups/{{currentMuscle}}">{{currentMuscle}}</a></h2>
 <h3>{{currentExerciseDetails.name}}</h3>
 <div class="lift-details">
   <div class="description" [innerHTML]="currentExerciseDetails.description"></div>
@@ -6,3 +6,4 @@
     <img [src]="currentExerciseDetails.images[0].image" />
   </ng-template>
 </div>
+<app-spinner *ngIf="loading"></app-spinner>

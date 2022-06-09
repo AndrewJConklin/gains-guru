@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MuscleGroupExercisesComponent } from './muscle-group-exercises/muscle-group-exercises.component';
 import { MuscleGroupsComponent } from './muscle-groups/muscle-groups.component';
 import { ExerciseDetailsComponent } from './exercise-details/exercise-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -10,18 +11,19 @@ const routes: Routes = [
     component: MuscleGroupsComponent,
   },
   {
-    path: ':name',
+    path: 'muscle-groups/:name',
     component: MuscleGroupExercisesComponent,
   },
   {
-    path: ':name/:id',
+    path: 'muscle-groups/:name/:id',
     component: ExerciseDetailsComponent,
   },
   {
     path: '',
     redirectTo: '/muscle-groups',
     pathMatch: 'full'
-  }
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

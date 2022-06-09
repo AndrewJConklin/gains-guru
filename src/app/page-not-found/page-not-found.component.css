@@ -1,0 +1,30 @@
+h2 {
+  background-color: hsl(189, 65%, 22%);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 15%;
+  text-align: center;
+}
+
+p {
+  font-size: 24px;
+  padding: 20px;
+  color: hsl(189, 65%, 22%);
+  background-color: hsl(46, 100%, 97%);
+  border: solid hsl(0, 0%, 2%);
+  text-align: center;
+  border-radius: 10px;
+}
+
+@media (min-width: 700px) {
+  h2 {
+    padding: 20px;
+  }
+
+  p {
+    font-size: 40px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+  }
+}

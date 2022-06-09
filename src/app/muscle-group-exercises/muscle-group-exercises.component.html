@@ -1,8 +1,9 @@
 <h2>{{currentMuscle}}</h2>
 <ul>
   <li class="exercise-listing" *ngFor="let exercise of exerciseList">
-    <a routerLink="/{{currentMuscle}}/{{exercise.id}}">
+    <a routerLink="/muscle-groups/{{currentMuscle}}/{{exercise.id}}">
       {{exercise.name}}
     </a>
   </li>
 </ul>
+<app-spinner *ngIf="loading"></app-spinner>
