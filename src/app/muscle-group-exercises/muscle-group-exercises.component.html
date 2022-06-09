@@ -1,7 +1,8 @@
 <div>
   <h2>{{currentMuscle}}</h2>
+  <app-spinner *ngIf="loading"></app-spinner>
   <form #searchForm="ngForm" (ngSubmit)="search(searchForm.value)">
-    <input name="searchTerm" placeholder="Bench Press, Butterfly" ngModel />
+    <input name="searchTerm" placeholder="{{randomExerciseGetter()}}, {{randomExerciseGetter()}}" ngModel />
     <input type="submit" value="Search" />
   </form>
 </div>
@@ -22,5 +23,3 @@
     </a>
   </li>
 </ul>
-
-<app-spinner *ngIf="loading"></app-spinner>

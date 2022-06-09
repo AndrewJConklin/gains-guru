@@ -31,6 +31,9 @@ export class MuscleGroupExercisesComponent implements OnInit {
       this.exerciseList = response.results.filter(result => result.language.short_name == "en" && result.category.name == this.currentMuscle)
       this.loading = false
     })
-
   }
+  randomExerciseGetter() {
+    return this.exerciseList[Math.floor(Math.random() * this.exerciseList.length)].name
+  }
+
 }
