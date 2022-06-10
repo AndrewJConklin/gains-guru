@@ -11,6 +11,7 @@ import { MuscleGroupExercisesComponent } from './muscle-group-exercises/muscle-g
 import { ExerciseDetailsComponent } from './exercise-details/exercise-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { LiftLogComponent } from './lift-log/lift-log.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     ExerciseDetailsComponent,
     PageNotFoundComponent,
     SpinnerComponent,
+    LiftLogComponent,
   ],
   imports: [
     BrowserModule,

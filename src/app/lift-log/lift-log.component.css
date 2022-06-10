@@ -1,0 +1,59 @@
+.lift-log {
+  font-size: 16px;
+  padding: 5px;
+  margin: 0 20%;
+}
+
+.log-table {
+  border-collapse: collapse;
+  min-width: 200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: auto;
+  border-radius: 10px;
+}
+
+.log-table thead tr {
+  background-color: hsl(189, 65%, 22%);
+  color: hsl(0, 0%, 100%);
+  text-align: left;
+}
+
+.log-table th,
+.log-table td {
+  padding: 10px 12px;
+}
+
+.log-table tbody tr {
+  border-bottom: 1px solid hsl(0, 0%, 87%);
+  text-align: center;
+}
+
+.log-table tbody tr:nth-of-type(even) {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.log-table tbody tr:last-of-type {
+  border-bottom: 2px solid hsl(189, 65%, 22%);
+}
+
+@media (min-width: 700px) {
+  .lift-log {
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .log-table {
+    min-width: 400px;
+  }
+
+  .log-table th,
+  .log-table td {
+    padding: 12px 15px;
+  }
+
+  .log-table tbody tr {
+    font-size: 20px;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    text-align: center;
+  }
+}
