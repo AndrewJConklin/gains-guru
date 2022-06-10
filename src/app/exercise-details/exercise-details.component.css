@@ -15,7 +15,6 @@ a:visited {
 
 h3 {
   font-size: 24px;
-  background-color: white;
   color: hsl(189, 65%, 22%);
   padding: 10px;
   border-radius: 10px;
@@ -41,6 +40,12 @@ img {
 
 
 @media (min-width: 700px) {
+  .switcher {
+    display: flex;
+    font-size: 24px;
+    color: hsl(189, 65%, 22%);
+  }
+
   h2 {
     padding: 20px;
   }

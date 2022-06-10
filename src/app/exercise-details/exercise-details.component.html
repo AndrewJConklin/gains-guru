@@ -1,5 +1,9 @@
 <h2><a routerLink="/muscle-groups/{{currentMuscle}}">{{currentMuscle}}</a></h2>
 <h3>{{currentExerciseDetails.name}}</h3>
+<div class="switcher">
+  <h4>Form</h4>
+  <h4>Log</h4>
+</div>
 <div class="lift-details">
   <div class="description" [innerHTML]="currentExerciseDetails.description"></div>
   <ng-template [ngIf]="currentExerciseDetails.images">
