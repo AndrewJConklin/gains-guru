@@ -22,20 +22,27 @@ h3 {
   text-align: center;
 }
 
+.switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switcher a,
+.switcher a:active,
+.switcher a:visited {
+  margin: 2% 8%;
+  text-decoration: none;
+  font-size: 20px;
+  color: hsl(189, 65%, 22%);
+}
+
 @media (min-width: 700px) {
-  .switcher {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .switcher a,
   .switcher a:active,
   .switcher a:visited {
-    margin: 2% 8%;
-    text-decoration: none;
     font-size: 24px;
-    color: hsl(189, 65%, 22%);
   }
 
   h2 {

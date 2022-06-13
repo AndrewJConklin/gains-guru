@@ -1,4 +1,17 @@
 <div class="lift-log">
+  <div class="adder">
+    <label>Date</label>
+    <input [(ngModel)]="newSet.date" type="date" required="" />
+
+    <label>Reps</label>
+    <input [(ngModel)]="newSet.reps" type="number" />
+
+    <label>Weight</label>
+    <input [(ngModel)]="newSet.weight" type="number" />
+  </div>
+  <div class="addButton">
+    <button (click)="addSet()">Add</button>
+  </div>
   <table class="log-table">
     <thead>
       <tr>
@@ -8,20 +21,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>2022-06-01</td>
-        <td>6</td>
-        <td>90</td>
-      </tr>
-      <tr>
-        <td>2022-06-03</td>
-        <td>8</td>
-        <td>90</td>
-      </tr>
-      <tr>
-        <td>2022-06-05</td>
-        <td>6</td>
-        <td>95</td>
+      <tr *ngFor="let set of sets">
+        <td>{{set.date}}</td>
+        <td>{{set.reps}}</td>
+        <td>{{set.weight}}</td>
       </tr>
     </tbody>
   </table>

@@ -10,7 +10,6 @@ import { WgerApiIntegrationService } from '../wger-api-integration.service';
   styleUrls: ['./lift-details.component.css']
 })
 export class LiftDetailsComponent implements OnInit {
-  currentMuscle: string = ""
   currentExcerciseID: string = ""
   currentExerciseDetails: ExerciseDetails = { name: "", id: "", description: "" }
 

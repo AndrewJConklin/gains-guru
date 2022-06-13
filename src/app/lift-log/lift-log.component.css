@@ -1,8 +1,48 @@
 .lift-log {
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   padding: 5px;
   margin: 0 20%;
 }
+
+.adder {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-width: 200px;
+  margin: auto;
+}
+
+.adder input {
+  font-size: 20px;
+  color: hsl(189, 65%, 22%);
+  transition: all 200ms ease;
+  border-left: 0 solid transparent;
+  border: 0;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 0 2rem rgb(20, 82, 93, 20%);
+  max-width: 400px;
+}
+
+.addButton {
+  text-align: center;
+  margin: 12px;
+  margin-bottom: 24px;
+}
+
+.addButton button {
+  font-size: 20px;
+  color: hsl(189, 65%, 22%);
+  transition: all 200ms ease;
+  border-left: 0 solid transparent;
+  border: 0;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 0 2rem rgb(20, 82, 93, 20%);
+}
+
 
 .log-table {
   border-collapse: collapse;
@@ -13,7 +53,7 @@
 }
 
 .log-table thead tr {
-  background-color: hsl(189, 65%, 14%);
+  background-color: hsl(189, 65%, 22%);
   color: hsl(0, 0%, 100%);
   text-align: left;
 }
