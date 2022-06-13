@@ -1,0 +1,6 @@
+<div class="lift-details">
+  <div class="description" [innerHTML]="currentExerciseDetails.description"></div>
+  <ng-template [ngIf]="currentExerciseDetails.images">
+    <img [src]="currentExerciseDetails.images[0].image" />
+  </ng-template>
+</div>

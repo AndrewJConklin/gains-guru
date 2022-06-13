@@ -1,14 +1,8 @@
 <h2><a routerLink="/muscle-groups/{{currentMuscle}}">{{currentMuscle}}</a></h2>
 <h3>{{currentExerciseDetails.name}}</h3>
 <div class="switcher">
-  <h4>Form</h4>
-  <h4>Log</h4>
+  <a routerLink="Form">Form</a>
+  <a routerLink="Log">Log</a>
 </div>
-<div class="lift-details">
-  <div class="description" [innerHTML]="currentExerciseDetails.description"></div>
-  <ng-template [ngIf]="currentExerciseDetails.images">
-    <img [src]="currentExerciseDetails.images[0].image" />
-  </ng-template>
-</div>
-<app-lift-log></app-lift-log>
+<router-outlet></router-outlet>
 <app-spinner *ngIf="loading"></app-spinner>
