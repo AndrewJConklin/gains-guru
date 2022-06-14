@@ -62,5 +62,13 @@ export class LiftLogComponent implements OnInit {
         this.refreshSets();
       })
   }
+
+  deleteSet(id: number) {
+    this.setService.deleteSet(id)
+      .subscribe(response => {
+        console.log(`Set with ID = ${id} deleted!`)
+        this.refreshSets();
+      })
+  }
 }
 

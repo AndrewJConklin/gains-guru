@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { Set } from './models/Set';
-import { Observable, throwError } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 
 
 type SetResponse = {
@@ -36,6 +36,11 @@ export class SetsApiIntegrationService {
   addSet(set: Set): Observable<any> {
     const body = JSON.stringify(set);
     return this.http.post('https://gains-guru.herokuapp.com/api/set/', body, this.httpOptions)
+      .pipe(catchError(this.handleError))
   }
 
+  deleteSet(id: number): Observable<void> {
+    return this.http.delete<void>(`https://gains-guru.herokuapp.com/api/set/${id}`)
+      .pipe(catchError(this.handleError))
+  }
 }
