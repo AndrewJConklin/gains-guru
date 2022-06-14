@@ -66,7 +66,7 @@ export class LiftLogComponent implements OnInit {
   deleteSet(id: number) {
     this.setService.deleteSet(id)
       .subscribe(response => {
-        console.log(`Set with ID = ${id} deleted!`)
+        console.log(`Set with ID = ${id}`)
         this.refreshSets();
       })
   }

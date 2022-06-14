@@ -12,17 +12,17 @@
   <div class="addButton">
     <button (click)="addSet()">Add</button>
   </div>
-  <table class="log-table" matSort (matSortChange)="sortData($event)">
+  <table class="log-table">
     <thead>
       <tr>
-        <th mat-sort-header="date">Date</th>
-        <th mat-sort-header="reps">Reps</th>
-        <th mat-sort-header="weight">Weight (lbs)</th>
+        <th>Date</th>
+        <th>Reps</th>
+        <th>Weight (lbs)</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor=" let set of sets">
+      <tr *ngFor="let set of sets">
         <td>{{set.date}}</td>
         <td>{{set.reps}}</td>
         <td>{{set.weight}}</td>

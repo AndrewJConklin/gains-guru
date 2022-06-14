@@ -16,6 +16,7 @@ input {
   font-size: 20px;
   color: hsl(189, 65%, 22%);
   transition: all 200ms ease;
+  margin-top: 2px;
   border-left: 0 solid transparent;
   border: 0;
   padding: 6px;
