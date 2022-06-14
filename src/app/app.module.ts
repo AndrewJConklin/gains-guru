@@ -14,6 +14,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { LiftLogComponent } from './lift-log/lift-log.component';
 import { LiftDetailsComponent } from './lift-details/lift-details.component';
 import { NavComponent } from './nav/nav.component';
+import { NutritionComponent } from './nutrition/nutrition.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NavComponent } from './nav/nav.component';
     LiftLogComponent,
     LiftDetailsComponent,
     NavComponent,
+    NutritionComponent,
   ],
   imports: [
     BrowserModule,

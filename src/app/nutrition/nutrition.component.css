@@ -1,0 +1,46 @@
+h2 {
+  background-color: hsl(189, 65%, 22%);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 15%;
+  text-align: center;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 7%;
+}
+
+.nutrition-listing {
+  font-size: 24px;
+  color: hsl(189, 65%, 22%);
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 10%;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: hsl(189, 65%, 22%);
+}
+
+@media (min-width: 700px) {
+  h2 {
+    padding: 20px;
+  }
+
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3% 20%;
+    margin-bottom: 30%;
+    grid-row-gap: 50%;
+  }
+
+  .nutrition-listing {
+    font-size: 40px;
+    text-align: center;
+  }
+}
