@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LiftLogComponent } from './lift-log/lift-log.component';
 import { LiftDetailsComponent } from './lift-details/lift-details.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LiftDetailsComponent } from './lift-details/lift-details.component';
     SpinnerComponent,
     LiftLogComponent,
     LiftDetailsComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

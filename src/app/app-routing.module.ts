@@ -6,6 +6,7 @@ import { ExerciseDetailsComponent } from './exercise-details/exercise-details.co
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LiftDetailsComponent } from './lift-details/lift-details.component';
 import { LiftLogComponent } from './lift-log/lift-log.component';
+import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'muscle-groups/:name',
     component: MuscleGroupExercisesComponent,
+  },
+  {
+    path: 'home',
+    component: NavComponent,
   },
   {
     path: 'muscle-groups/:name/:id',
@@ -37,7 +42,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/muscle-groups',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
