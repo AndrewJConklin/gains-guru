@@ -1,6 +1,6 @@
+<h2>Macros</h2>
 <div class="macros">
-  <h2>Macros</h2>
-  <h3>Todays Macros</h3>
+  <h3>Today's Macros</h3>
   <table class="macro-today-table">
     <thead>
       <tr>
@@ -11,21 +11,63 @@
     <tbody>
       <tr>
         <td>Fat</td>
-        <td>80 grams</td>
+        <td>{{dailyFat}} grams</td>
       </tr>
       <tr>
         <td>Protein</td>
-        <td>100 grams</td>
+        <td>{{dailyProtein}} grams</td>
       </tr>
       <tr>
         <td>Carbs</td>
-        <td>100 grams</td>
+        <td>{{dailyCarbs}} grams</td>
       </tr>
       <tr>
         <td>Calories</td>
-        <td>2000 cals</td>
+        <td>{{dailyCals}} cals</td>
       </tr>
     </tbody>
   </table>
+</div>
 
+<div class="entries">
+  <h3>Today's Entries</h3>
+  <table class="entry-table">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Fat</th>
+        <th>Protein</th>
+        <th>Carbs</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of entries">
+        <td>{{entry.name}}</td>
+        <td>{{entry.fat}}</td>
+        <td>{{entry.protein}}</td>
+        <td>{{entry.carbs}}</td>
+        <td>{{entry.calories}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="add-entry">
+  <label>Food</label>
+  <input [(ngModel)]="newEntry.name" type="text" />
+
+  <label>Fat</label>
+  <input [(ngModel)]="newEntry.fat" type="number" />
+
+  <label>Protein</label>
+  <input [(ngModel)]="newEntry.protein" type="number" />
+
+  <label>Carbs</label>
+  <input [(ngModel)]="newEntry.carbs" type="number" />
+
+  <label>Calories</label>
+  <input [(ngModel)]="newEntry.calories" type="number" />
+</div>
+<div class="addButton">
+  <button (click)="addEntry()">Add</button>
 </div>

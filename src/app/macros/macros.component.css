@@ -22,7 +22,8 @@ h3 {
   text-align: center;
 }
 
-.macros {
+.macros,
+.entries {
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -30,8 +31,7 @@ h3 {
   margin: 0 20%;
 }
 
-
-.macro-today-table {
+table {
   border-collapse: collapse;
   min-width: 200px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -39,27 +39,27 @@ h3 {
   border-radius: 10px;
 }
 
-.macro-today-table thead tr {
+thead tr {
   background-color: hsl(189, 65%, 22%);
   color: hsl(0, 0%, 100%);
   text-align: left;
 }
 
-.macro-today-table th,
-.macro-today-table td {
+th,
+td {
   padding: 10px 12px;
 }
 
-.macro-today-table tbody tr {
+tbody tr {
   border-bottom: 1px solid hsl(0, 0%, 87%);
   text-align: center;
 }
 
-.macro-today-table tbody tr:nth-of-type(even) {
+tbody tr:nth-of-type(even) {
   background-color: hsl(0, 0%, 95%);
 }
 
-.macro-today-table tbody tr:last-of-type {
+tbody tr:last-of-type {
   border-bottom: 2px solid hsl(189, 65%, 22%);
 }
 
@@ -74,21 +74,22 @@ h3 {
     padding: 20px;
   }
 
-  .macros {
+  .macros,
+  .entries {
     font-size: 25px;
     padding: 10px;
   }
 
-  .macro-today-table {
+  table {
     min-width: 400px;
   }
 
-  .macro-today-table th,
-  .macro-today-table td {
+  th,
+  td {
     padding: 12px 15px;
   }
 
-  .macro-today-table tbody tr {
+  tbody tr {
     font-size: 20px;
     border-bottom: 1px solid hsl(0, 0%, 87%);
     text-align: center;
