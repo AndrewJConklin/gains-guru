@@ -38,6 +38,12 @@ export class EntriesApiIntegrationService {
       .pipe(catchError(this.handleError))
   }
 
+  updateEntry(entry: Entry): Observable<any> {
+    const body = JSON.stringify(entry);
+    return this.http.put(`https://gains-guru.herokuapp.com/api/entries/${entry.id}`, body, this.httpOptions)
+      .pipe(catchError(this.handleError))
+  }
+
   deleteEntry(id: number): Observable<void> {
     return this.http.delete<void>(`https://gains-guru.herokuapp.com/api/entries/${id}`)
       .pipe(catchError(this.handleError))

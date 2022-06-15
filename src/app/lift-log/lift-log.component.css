@@ -121,10 +121,7 @@
     text-align: center;
   }
 
-  .delete-btn {
-    font-size: 20px;
-  }
-
+  .delete-btn,
   .update-btn {
     font-size: 20px;
   }

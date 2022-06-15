@@ -68,6 +68,7 @@ export class LiftLogComponent implements OnInit {
     this.setService.addSet(this.newSet)
       .subscribe(response => {
         this.refreshSets();
+        this.resetNewEntry()
       })
   }
 
@@ -76,6 +77,7 @@ export class LiftLogComponent implements OnInit {
       .subscribe(response => {
         this.activeUpdate = false
         this.refreshSets();
+        this.resetUpdatedSet()
       })
   }
 
@@ -94,6 +96,23 @@ export class LiftLogComponent implements OnInit {
 
   cancelUpdate() {
     this.activeUpdate = false
+  }
+
+
+  resetUpdatedSet() {
+    this.newSet.id = 0;
+    this.newSet.exerciseID = 0;
+    this.newSet.date = "";
+    this.newSet.reps = 0;
+    this.newSet.weight = 0
+  }
+
+  resetNewEntry() {
+    this.updatedSet.id = 0;
+    this.updatedSet.exerciseID = 0;
+    this.updatedSet.date = "";
+    this.updatedSet.reps = 0;
+    this.updatedSet.weight = 0
   }
 }
 

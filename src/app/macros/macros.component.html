@@ -1,4 +1,5 @@
 <h2>Macros</h2>
+
 <div class="macros">
   <h3>Today's Macros</h3>
   <table class="macro-today-table">
@@ -28,6 +29,7 @@
     </tbody>
   </table>
 </div>
+
 <div class="entries">
   <h3>Today's Entries</h3>
   <table class="entry-table">
@@ -38,6 +40,7 @@
         <th>Protein</th>
         <th>Carbs</th>
         <th>Calories</th>
+        <th *ngIf="!activeUpdate">Update/Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -47,12 +50,17 @@
         <td>{{entry.protein}}</td>
         <td>{{entry.carbs}}</td>
         <td>{{entry.calories}}</td>
+        <td *ngIf="!activeUpdate">
+          <button class="update-btn" (click)="update(entry)">Update</button>
+          <button class="delete-btn" (click)="deleteEntry(entry.id)">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
+
 <div class="entry-wrap">
-  <div class="add-entry">
+  <div *ngIf="!activeUpdate" class="add-entry">
     <h3>Add Entry</h3>
     <label>Food</label>
     <input [(ngModel)]="newEntry.name" type="text" />
@@ -68,8 +76,29 @@
 
     <label>Calories</label>
     <input [(ngModel)]="newEntry.calories" type="number" />
+    <div class="addButton">
+      <button (click)="addEntry()">Add</button>
+    </div>
   </div>
-  <div class="addButton">
-    <button (click)="addEntry()">Add</button>
+  <div *ngIf="activeUpdate" class="updater">
+    <h3>Update Entry</h3>
+    <label>Food</label>
+    <input [(ngModel)]="updatedEntry.name" type="text" />
+
+    <label>Fat</label>
+    <input [(ngModel)]="updatedEntry.fat" type="number" />
+
+    <label>Protein</label>
+    <input [(ngModel)]="updatedEntry.protein" type="number" />
+
+    <label>Carbs</label>
+    <input [(ngModel)]="updatedEntry.carbs" type="number" />
+
+    <label>Calories</label>
+    <input [(ngModel)]="updatedEntry.calories" type="number" />
+    <div class="saveButton">
+      <button (click)="updateEntry()">Save</button>
+      <button (click)="cancelUpdate()">Cancel</button>
+    </div>
   </div>
 </div>
