@@ -1,33 +1,49 @@
 <div class="lift-log">
-  <div class="adder">
+  <div *ngIf="!activeUpdate" class="adder">
     <label>Date</label>
-    <input [(ngModel)]="newSet.date" type="date" required="" />
+    <input [(ngModel)]="newSet.date" type="date" />
 
     <label>Reps</label>
     <input [(ngModel)]="newSet.reps" type="number" />
 
     <label>Weight</label>
     <input [(ngModel)]="newSet.weight" type="number" />
+    <div class="addButton">
+      <button (click)="addSet()">Add</button>
+    </div>
   </div>
-  <div class="addButton">
-    <button (click)="addSet()">Add</button>
+  <div *ngIf="activeUpdate" class="adder">
+    <label>Date</label>
+    <input [(ngModel)]="updatedSet.date" type="date" />
+
+    <label>Reps</label>
+    <input [(ngModel)]="updatedSet.reps" type="number" />
+
+    <label>Weight</label>
+    <input [(ngModel)]="updatedSet.weight" type="number" />
+    <div class="saveButton">
+      <button (click)="updateSet()">Save</button>
+    </div>
   </div>
-  <table class="log-table">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Reps</th>
-        <th>Weight (lbs)</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let set of sets">
-        <td>{{set.date}}</td>
-        <td>{{set.reps}}</td>
-        <td>{{set.weight}}</td>
-        <button class="delete-btn" (click)="deleteSet(set.id)">Delete</button>
-      </tr>
-    </tbody>
-  </table>
 </div>
+<table class="log-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Reps</th>
+      <th>Weight (lbs)</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let set of sets">
+      <td>{{set.date}}</td>
+      <td>{{set.reps}}</td>
+      <td>{{set.weight}}</td>
+      <td>
+        <button *ngIf="!activeUpdate" class="delete-btn" (click)="deleteSet(set.id)">Delete</button>
+        <button *ngIf="!activeUpdate" class="update-btn" (click)="update(set)">Update</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

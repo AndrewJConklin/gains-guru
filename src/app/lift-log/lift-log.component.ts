@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { ExerciseDetails } from '../models/ExerciseDetails';
@@ -25,6 +25,15 @@ export class LiftLogComponent implements OnInit {
     reps: 0,
     weight: 0
   }
+  updatedSet: Set = {
+    id: 0,
+    exerciseID: 0,
+    date: "",
+    reps: 0,
+    weight: 0
+  }
+
+  activeUpdate: boolean = false
 
   constructor(private route: ActivatedRoute, private exerciseService: WgerApiIntegrationService, private setService: SetsApiIntegrationService) { }
 
@@ -58,7 +67,14 @@ export class LiftLogComponent implements OnInit {
   addSet() {
     this.setService.addSet(this.newSet)
       .subscribe(response => {
-        console.log(response)
+        this.refreshSets();
+      })
+  }
+
+  updateSet() {
+    this.setService.updateSet(this.updatedSet)
+      .subscribe(response => {
+        this.activeUpdate = false
         this.refreshSets();
       })
   }
@@ -70,5 +86,11 @@ export class LiftLogComponent implements OnInit {
         this.refreshSets();
       })
   }
+
+  update(set: Set) {
+    this.activeUpdate = true
+    this.updatedSet = set
+  }
 }
+
 
