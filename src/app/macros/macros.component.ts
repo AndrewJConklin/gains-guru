@@ -63,8 +63,8 @@ export class MacrosComponent implements OnInit {
   addEntry() {
     this.entryService.addEntry(this.newEntry)
       .subscribe(response => {
-        console.log(response)
         this.refreshEntries();
+        this.refreshDaily()
       })
   }
 
@@ -75,4 +75,26 @@ export class MacrosComponent implements OnInit {
         this.refreshEntries();
       })
   }
+
+  refreshDaily() {
+    this.entryService.getEntries()
+      .subscribe(response => {
+        this.entries = response.entries.filter(entry => entry.date == this.today)
+
+
+        this.dailyFat = this.entries.reduce(function (acc, entry) {
+          return acc + entry.fat
+        }, 0)
+        this.dailyProtein = this.entries.reduce(function (acc, entry) {
+          return acc + entry.protein
+        }, 0)
+        this.dailyCarbs = this.entries.reduce(function (acc, entry) {
+          return acc + entry.carbs
+        }, 0)
+        this.dailyCals = this.entries.reduce(function (acc, entry) {
+          return acc + entry.calories
+        }, 0)
+      })
+  }
+
 }

@@ -51,22 +51,25 @@
     </tbody>
   </table>
 </div>
-<div class="add-entry">
-  <label>Food</label>
-  <input [(ngModel)]="newEntry.name" type="text" />
+<div class="entry-wrap">
+  <div class="add-entry">
+    <h3>Add Entry</h3>
+    <label>Food</label>
+    <input [(ngModel)]="newEntry.name" type="text" />
 
-  <label>Fat</label>
-  <input [(ngModel)]="newEntry.fat" type="number" />
+    <label>Fat</label>
+    <input [(ngModel)]="newEntry.fat" type="number" />
 
-  <label>Protein</label>
-  <input [(ngModel)]="newEntry.protein" type="number" />
+    <label>Protein</label>
+    <input [(ngModel)]="newEntry.protein" type="number" />
 
-  <label>Carbs</label>
-  <input [(ngModel)]="newEntry.carbs" type="number" />
+    <label>Carbs</label>
+    <input [(ngModel)]="newEntry.carbs" type="number" />
 
-  <label>Calories</label>
-  <input [(ngModel)]="newEntry.calories" type="number" />
-</div>
-<div class="addButton">
-  <button (click)="addEntry()">Add</button>
+    <label>Calories</label>
+    <input [(ngModel)]="newEntry.calories" type="number" />
+  </div>
+  <div class="addButton">
+    <button (click)="addEntry()">Add</button>
+  </div>
 </div>
