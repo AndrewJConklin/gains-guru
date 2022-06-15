@@ -76,7 +76,6 @@ export class MacrosComponent implements OnInit {
       .subscribe(response => {
         this.refreshEntries();
         this.refreshDaily();
-        this.resetNewEntry()
       })
   }
 
@@ -87,7 +86,6 @@ export class MacrosComponent implements OnInit {
         this.activeUpdate = false
         this.refreshEntries();
         this.refreshDaily();
-        this.resetUpdatedEntry();
       })
   }
 
@@ -130,23 +128,4 @@ export class MacrosComponent implements OnInit {
       })
   }
 
-  resetUpdatedEntry() {
-    this.updatedEntry.id = 0;
-    this.updatedEntry.name = "";
-    this.updatedEntry.calories = 0;
-    this.updatedEntry.date = "";
-    this.updatedEntry.carbs = 0;
-    this.updatedEntry.fat = 0;
-    this.updatedEntry.protein = 0
-  }
-
-  resetNewEntry() {
-    this.newEntry.id = 0;
-    this.newEntry.name = "";
-    this.newEntry.calories = 0;
-    this.newEntry.date = "";
-    this.newEntry.carbs = 0;
-    this.newEntry.fat = 0;
-    this.newEntry.protein = 0
-  }
 }

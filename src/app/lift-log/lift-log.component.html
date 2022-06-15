@@ -1,13 +1,13 @@
 <div class="lift-log">
   <div *ngIf="!activeUpdate" class="adder">
     <label>Date</label>
-    <input [(ngModel)]="newSet.date" type="date" />
+    <input [(ngModel)]="newSet.date" type="date" required />
 
     <label>Reps</label>
-    <input [(ngModel)]="newSet.reps" type="number" />
+    <input [(ngModel)]="newSet.reps" type="number" required />
 
     <label>Weight</label>
-    <input [(ngModel)]="newSet.weight" type="number" />
+    <input [(ngModel)]="newSet.weight" type="number" required />
     <div class="addButton">
       <button (click)="addSet()">Add</button>
     </div>
