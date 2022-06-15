@@ -12,7 +12,7 @@
       <button (click)="addSet()">Add</button>
     </div>
   </div>
-  <div *ngIf="activeUpdate" class="adder">
+  <div *ngIf="activeUpdate" class="updater">
     <label>Date</label>
     <input [(ngModel)]="updatedSet.date" type="date" />
 
@@ -23,6 +23,7 @@
     <input [(ngModel)]="updatedSet.weight" type="number" />
     <div class="saveButton">
       <button (click)="updateSet()">Save</button>
+      <button (click)="cancelUpdate()">Cancel</button>
     </div>
   </div>
 </div>
@@ -32,7 +33,7 @@
       <th>Date</th>
       <th>Reps</th>
       <th>Weight (lbs)</th>
-      <th></th>
+      <th *ngIf="!activeUpdate">Update/Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -40,9 +41,9 @@
       <td>{{set.date}}</td>
       <td>{{set.reps}}</td>
       <td>{{set.weight}}</td>
-      <td>
-        <button *ngIf="!activeUpdate" class="delete-btn" (click)="deleteSet(set.id)">Delete</button>
-        <button *ngIf="!activeUpdate" class="update-btn" (click)="update(set)">Update</button>
+      <td *ngIf="!activeUpdate">
+        <button class="update-btn" (click)="update(set)">Update</button>
+        <button class="delete-btn" (click)="deleteSet(set.id)">Delete</button>
       </td>
     </tr>
   </tbody>

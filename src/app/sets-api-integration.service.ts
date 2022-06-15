@@ -41,7 +41,7 @@ export class SetsApiIntegrationService {
 
   updateSet(set: Set): Observable<any> {
     const body = JSON.stringify(set);
-    return this.http.post(`https://gains-guru.herokuapp.com/api/set/${set.id}`, body, this.httpOptions)
+    return this.http.put(`https://gains-guru.herokuapp.com/api/set/${set.id}`, body, this.httpOptions)
       .pipe(catchError(this.handleError))
   }
 

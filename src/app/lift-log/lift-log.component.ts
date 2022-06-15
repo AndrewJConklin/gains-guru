@@ -91,6 +91,10 @@ export class LiftLogComponent implements OnInit {
     this.activeUpdate = true
     this.updatedSet = set
   }
+
+  cancelUpdate() {
+    this.activeUpdate = false
+  }
 }
 
 

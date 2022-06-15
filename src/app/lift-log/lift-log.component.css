@@ -6,7 +6,8 @@
   margin: 0 20%;
 }
 
-.adder {
+.adder,
+.updater {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -14,7 +15,8 @@
   margin: auto;
 }
 
-.adder input {
+.adder input,
+.updater input {
   font-size: 20px;
   color: hsl(189, 65%, 22%);
   transition: all 200ms ease;
@@ -26,13 +28,15 @@
   max-width: 400px;
 }
 
-.addButton {
+.addButton,
+.saveButton {
   text-align: center;
   margin: 12px;
   margin-bottom: 24px;
 }
 
-.addButton button {
+.addButton button,
+.saveButton button {
   font-size: 20px;
   color: hsl(189, 65%, 22%);
   border-left: 0 solid transparent;
@@ -76,8 +80,19 @@
 }
 
 .delete-btn {
-  font-size: 16px;
+  font-size: 12px;
   color: hsl(189, 65%, 22%);
+  border-left: 0 solid transparent;
+  border: 0;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 0 2rem hsla(189, 65%, 22%, 0.1);
+}
+
+.update-btn {
+  font-size: 12px;
+  color: hsl(189, 65%, 22%);
+  margin-left: 3px;
   border-left: 0 solid transparent;
   border: 0;
   padding: 6px;
@@ -107,6 +122,10 @@
   }
 
   .delete-btn {
+    font-size: 20px;
+  }
+
+  .update-btn {
     font-size: 20px;
   }
 }
