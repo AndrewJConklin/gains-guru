@@ -8,6 +8,7 @@ import { Set } from '../models/Set';
 import { SetsApiIntegrationService } from '../sets-api-integration.service';
 
 
+
 @Component({
   selector: 'app-lift-log',
   templateUrl: './lift-log.component.html',
@@ -22,14 +23,14 @@ export class LiftLogComponent implements OnInit {
     id: 0,
     exerciseID: 0,
     date: "",
-    reps: 0,
+    reps: 1,
     weight: 0
   }
   updatedSet: Set = {
     id: 0,
     exerciseID: 0,
     date: "",
-    reps: 0,
+    reps: 1,
     weight: 0
   }
 
@@ -94,6 +95,17 @@ export class LiftLogComponent implements OnInit {
 
   cancelUpdate() {
     this.activeUpdate = false
+    this.refreshSets();
+  }
+
+  validateWhite(event: number) {
+    if (event > 1000) {
+      this.newSet.reps = 1000;
+    } else if (event < 1) {
+      this.newSet.reps = 1;
+    } else {
+      this.newSet.reps = event;
+    }
   }
 
 }

@@ -1,15 +1,15 @@
 <div class="lift-log">
   <div *ngIf="!activeUpdate" class="adder">
     <label>Date</label>
-    <input [(ngModel)]="newSet.date" type="date" required />
+    <input [(ngModel)]="newSet.date" type="date" />
 
     <label>Reps</label>
-    <input [(ngModel)]="newSet.reps" type="number" required />
+    <input [(ngModel)]="newSet.reps" type="number" />
 
     <label>Weight</label>
-    <input [(ngModel)]="newSet.weight" type="number" required />
+    <input [(ngModel)]="newSet.weight" type="number" />
     <div class="addButton">
-      <button (click)="addSet()">Add</button>
+      <button [disabled]="newSet.date === '' || newSet.reps < 1" (click)="addSet()">Add</button>
     </div>
   </div>
   <div *ngIf="activeUpdate" class="updater">
@@ -22,7 +22,7 @@
     <label>Weight</label>
     <input [(ngModel)]="updatedSet.weight" type="number" />
     <div class="saveButton">
-      <button (click)="updateSet()">Save</button>
+      <button [disabled]="updatedSet.date === '' || updatedSet.reps < 1" (click)="updateSet()">Save</button>
       <button (click)="cancelUpdate()">Cancel</button>
     </div>
   </div>

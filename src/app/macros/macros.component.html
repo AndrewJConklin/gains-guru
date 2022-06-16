@@ -77,7 +77,7 @@
     <label>Calories</label>
     <input [(ngModel)]="newEntry.calories" type="number" />
     <div class="addButton">
-      <button (click)="addEntry()">Add</button>
+      <button [disabled]="newEntry.name === ''" (click)="addEntry()">Add</button>
     </div>
   </div>
   <div *ngIf="activeUpdate" class="updater">
@@ -97,7 +97,7 @@
     <label>Calories</label>
     <input [(ngModel)]="updatedEntry.calories" type="number" />
     <div class="saveButton">
-      <button (click)="updateEntry()">Save</button>
+      <button [disabled]="updatedEntry.name === ''" (click)="updateEntry()">Save</button>
       <button (click)="cancelUpdate()">Cancel</button>
     </div>
   </div>

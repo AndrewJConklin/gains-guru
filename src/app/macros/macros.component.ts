@@ -106,6 +106,8 @@ export class MacrosComponent implements OnInit {
 
   cancelUpdate() {
     this.activeUpdate = false
+    this.refreshEntries();
+    this.refreshDaily()
   }
 
   refreshDaily() {
