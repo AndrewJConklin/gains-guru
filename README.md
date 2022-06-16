@@ -4,7 +4,8 @@ Please see the deployed application at the following link: https://gains-guru.ne
 
 Introducing the newest app to hit the fitness world, Gains Guru! Gains Guru is designed to act as your own personal trainer so that you can focus on what is most important, killing your workout! 
 
-## Features With Gains Guru you can:
+## Features 
+With Gains Guru you can:
 - Quickly reference a list of the most popular exercises for each muscle group
 - Filter exercise list to find specific exercises
 - Pull up exercise form instructions and illustrations
@@ -40,4 +41,4 @@ Back end
 - Deployed on Heroku
 
 Database
--PostgreSQL
+- PostgreSQL
